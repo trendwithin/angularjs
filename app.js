@@ -25,6 +25,24 @@
       this.review = {};
     };
   });
+  app.directive('productTitel', function(){
+    return {
+      restrict: 'E',
+      templateUrl: 'product-title.html'
+    };
+  });
+
+  app.directive('productPanels', function() {
+    return {
+      retrict: 'E',
+      templateUrl: 'product-panels.html',
+      controller:function(){
+
+      },
+      controllerAs: 'panels'
+    }
+  });
+
 
   var gems = [
     {
