@@ -17,6 +17,15 @@
     };
   });
 
+  app.controller("ReviewController", function() {
+    this.review = {};
+
+    this.addReview = function(product) {
+      product.reviews.push(this.review);
+      this.review = {};
+    };
+  });
+
   var gems = [
     {
       name: "Ruby",
@@ -25,8 +34,22 @@
       canPurchase: true,
       soldOut: false,
       images: [
+       {
+        full: 'ruby.jpeg',
+       }
+      ],
+      reviews: [
         {
-          full: 'ruby.jpeg'
+          stars: 5,
+          body: "I love this gem!",
+          author: "joe@example.org",
+          createdOn: 1397490980837
+        },
+        {
+          stars: 1,
+          body: "This gem sucks.",
+          author: "tim@example.org",
+          createdOn: 1397490980837
         }
       ]
     },
@@ -35,7 +58,7 @@
       price: 5.95,
       description: ". . .",
       canPurchase: true,
-    }
-  ];
+    },
+  ]
 
 })();
