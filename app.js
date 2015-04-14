@@ -25,7 +25,19 @@
       this.review = {};
     };
   });
-  app.directive('productTitel', function(){
+
+  app.directive('productForm', function() {
+    return {
+      retrict: 'E',
+      templateUrl: 'product-form.html',
+      controller:function(){
+
+      },
+      controllerAs: 'form'
+    }
+  });
+
+  app.directive('productTitle', function(){
     return {
       restrict: 'E',
       templateUrl: 'product-title.html'
